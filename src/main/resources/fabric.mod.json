@@ -13,7 +13,7 @@
     "sources": "https://github.com/daatguy/arkham-sticks"
   },
 
-  "license": "CC0-1.0",
+  "license": "GPL-3.0-or-later WITH GPL-3.0-linking-exception",
   "icon": "assets/arkham_sticks/icon.png",
 
   "environment": "*",

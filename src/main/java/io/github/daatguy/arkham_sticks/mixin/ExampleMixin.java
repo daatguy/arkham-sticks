@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-or-later WITH GPL-3.0-linking-exception
 package io.github.daatguy.arkham_sticks.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
