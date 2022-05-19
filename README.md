@@ -1,6 +1,9 @@
 # Arkham Sticks
 
 ## License
+
+Copyright (C) 2022 daatguy
+
 This mod is licensed under `GPL-3.0-or-later WITH GPL-3.0-linking-exception`. That is, the GNU General Public License, either version 3, or (at your option) any later version, with the following exception in particular:
 
 > Additional permission under GNU GPL version 3 section 7
