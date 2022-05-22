@@ -15,20 +15,24 @@ public class ModBlocks {
 	private static final ArrayList<BlockRegistration> modBlocks = 
 			new ArrayList<BlockRegistration>();
 
-	/** Sepulchral bricks */
 	public static final BlockRegistration SEPULCHRAL_BRICKS = add(
 			new BlockRegistration(
 					new BlockSepulchralBricks(), 
 					"sepulchral_bricks",
 					ItemGroup.BUILDING_BLOCKS));
+	public static final BlockRegistration WRITING_DESK = add(
+			new BlockRegistration(
+					new BlockWritingDesk(),
+					"writing_desk",
+					ItemGroup.DECORATIONS));
 
-	/** Adds an item instance to our list of items */
+	/** Adds an block instance to our list of blocks */
 	private static BlockRegistration add(BlockRegistration in) {
-		modBlocks.add(in); // Keep track off all our items in a list
+		modBlocks.add(in); // Keep track off all our blocks in a list
 		return in;
 	}
 
-	/** Registers all the items in the mod to Minecraft's registry */
+	/** Registers all the block in the mod to Minecraft's registry */
 	public static void register() {
 		for (BlockRegistration block : modBlocks) {
 			Registry.register(Registry.BLOCK, // Add to block registry

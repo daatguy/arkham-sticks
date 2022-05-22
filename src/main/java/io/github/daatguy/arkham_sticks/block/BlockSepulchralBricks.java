@@ -8,7 +8,6 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
@@ -18,14 +17,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class BlockSepulchralBricks extends ModBlock {
+public class BlockSepulchralBricks extends Block {
 
 	public BlockSepulchralBricks() {
 		super(FabricBlockSettings.of(Material.STONE)
 	          .hardness(4.0f)
-	          .resistance(18000000.0f),
-	          true,
-	          ItemGroup.BUILDING_BLOCKS);
+	          .resistance(18000000.0f));
 	}
 	
 	@Override

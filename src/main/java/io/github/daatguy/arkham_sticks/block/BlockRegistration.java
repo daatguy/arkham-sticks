@@ -6,8 +6,8 @@ import net.minecraft.item.ItemGroup;
 
 public class BlockRegistration extends Registration<Block> {
 
-	private boolean hasItem;
-	private ItemGroup group;
+	private final boolean hasItem;
+	private final ItemGroup group;
 	
 	/**
 	 * Constructs a new registry entry of a block
