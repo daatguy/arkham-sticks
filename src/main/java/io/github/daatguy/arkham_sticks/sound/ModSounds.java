@@ -3,9 +3,6 @@ package io.github.daatguy.arkham_sticks.sound;
 
 import java.util.ArrayList;
 
-import io.github.daatguy.arkham_sticks.Mod;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModSounds {

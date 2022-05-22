@@ -1,6 +1,5 @@
 package io.github.daatguy.arkham_sticks.item;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -11,7 +10,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.text.Style;
 import net.minecraft.text.Text;
 import net.minecraft.text.TextColor;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Language;
 import net.minecraft.world.World;
@@ -50,7 +48,6 @@ public class ModItem extends Item {
         TextColor gray = TextColor.fromFormatting(Formatting.GRAY);
 
 		if(key.equals(translated)) return; // Exit case, no description field
-		ArrayList<String> lines = new ArrayList<String>();
 		
 		String[] words = translated.split("\\s+");
     	String line = "";
