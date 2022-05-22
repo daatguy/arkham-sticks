@@ -2,5 +2,7 @@
   "item.arkham_sticks.sepulchral_dust": "Sepulchral Dust",
   "item.arkham_sticks.sepulchral_dust.tooltip": "The dust consists of triangular grains, all the same size: miniscule pyramids in your palm.",
   "item.arkham_sticks.sepulchral_shards": "Sepulchral Shards",
-  "item.arkham_sticks.sepulchral_shards.tooltip": "It smells of metal and mold. Cold to the touch."
+  "item.arkham_sticks.sepulchral_shards.tooltip": "It smells of metal and mold. Cold to the touch.",
+  "block.arkham_sticks.sepulchral_bricks": "Sepulchral Bricks",
+  "subtitles.arkham_sticks.block.sepulchral_shatter": "Strange resonances echo from the bricks"
 }

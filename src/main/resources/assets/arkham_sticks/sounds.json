@@ -1,0 +1,8 @@
+{
+  "block/sepulchral_shatter": {
+    "subtitle": "subtitles.arkham_sticks.block.sepulchral_shatter",
+    "sounds": [
+      "arkham_sticks:block/sepulchral_shatter"
+    ]
+  }
+}

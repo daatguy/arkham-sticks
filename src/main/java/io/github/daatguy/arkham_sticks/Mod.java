@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import io.github.daatguy.arkham_sticks.block.ModBlocks;
 import io.github.daatguy.arkham_sticks.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -33,5 +34,6 @@ public class Mod implements ModInitializer {
     @Override
     public void onInitialize() {
     	ModItems.register();
+    	ModBlocks.register();
     }
 }
