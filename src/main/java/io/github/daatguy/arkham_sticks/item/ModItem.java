@@ -21,19 +21,15 @@ import net.minecraft.world.World;
  */
 public class ModItem extends Item {
 
-	/** The item's id */
-	public final String id;
 	/** The length at which to wrap the tooltip */
 	public static int TOOLTIP_CHARACTER_WRAP = 25;
 	
 	/**
 	 * Constructs a new ModItem
-	 * @param idIn    the item ID to use in the game registry
 	 * @param groupIn the item's inventory group
 	 */
-	public ModItem(String idIn, ItemGroup groupIn) {
+	public ModItem(ItemGroup groupIn) {
 		super(new FabricItemSettings().group(groupIn));
-		this.id = idIn;
 	}
 
 	@Override

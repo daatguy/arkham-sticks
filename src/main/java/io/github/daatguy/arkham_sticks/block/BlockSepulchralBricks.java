@@ -18,16 +18,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
-public class SepulchralBricks extends ModBlock {
-	
-	public static final String ID = "sepulchral_bricks";
+public class BlockSepulchralBricks extends ModBlock {
 
-	public SepulchralBricks() {
+	public BlockSepulchralBricks() {
 		super(FabricBlockSettings.of(Material.STONE)
-	          .strength(4.0f)
 	          .hardness(4.0f)
 	          .resistance(18000000.0f),
-	          ID,
 	          true,
 	          ItemGroup.BUILDING_BLOCKS);
 	}
@@ -40,7 +36,8 @@ public class SepulchralBricks extends ModBlock {
 			player.incrementStat(Stats.MINED.getOrCreateStat(this));
 	        player.addExhaustion(0.005f);
 	        world.setBlockState(pos, state);
-	        Block.dropStack(world, pos, new ItemStack(ModItems.SEPULCHRAL_SHARDS));
+	        Block.dropStack(world, pos, 
+	        		new ItemStack(ModItems.SEPULCHRAL_SHARDS.getEntry()));
 	        world.playSound(null, pos, ModSounds.SEPULCHRAL_SHATTER, 
 	        		        SoundCategory.BLOCKS, 1f, 
 	        		        MathHelper.nextBetween(world.random, 0.8f, 1.6f));
