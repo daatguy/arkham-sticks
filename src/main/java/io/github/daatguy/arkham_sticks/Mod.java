@@ -5,7 +5,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import io.github.daatguy.arkham_sticks.block.ModBlocks;
+import io.github.daatguy.arkham_sticks.blockentity.ModBlockEntities;
 import io.github.daatguy.arkham_sticks.item.ModItems;
+import io.github.daatguy.arkham_sticks.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 
 /**
@@ -26,12 +28,19 @@ public class Mod implements ModInitializer {
 	 *  That way, it's clear which mod wrote info, warnings, and errors. */
 	public static final Logger LOGGER = LoggerFactory.getLogger(Mod.ID);
 	
+	public static final ModItems ITEMS = new ModItems();
+	public static final ModBlocks BLOCKS = new ModBlocks();
+	public static final ModBlockEntities BLOCK_ENTITIES = new ModBlockEntities();
+	public static final ModSounds SOUNDS = new ModSounds();
+	
     /**
      * The initialization step of mod-loading
      */
     @Override
     public void onInitialize() {
-    	ModItems.register();
-    	ModBlocks.register();
+    	ITEMS.register();
+    	BLOCKS.register();
+    	BLOCK_ENTITIES.register();
+    	SOUNDS.register();
     }
 }

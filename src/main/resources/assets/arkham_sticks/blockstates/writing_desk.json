@@ -1,6 +1,5 @@
 {
-    "variants": {
-        "normal": { "model": "arkham_sticks:writing_desk" },
-        "inventory": { "model": "arkham_sticks:writing_desk" }
-    }
+  "variants": {
+    "": { "model": "arkham_sticks:block/writing_desk" }
+  }
 }

@@ -1,7 +1,6 @@
 package io.github.daatguy.arkham_sticks.block;
 
-import io.github.daatguy.arkham_sticks.item.ModItems;
-import io.github.daatguy.arkham_sticks.sound.ModSounds;
+import io.github.daatguy.arkham_sticks.Mod;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -34,8 +33,8 @@ public class BlockSepulchralBricks extends Block {
 	        player.addExhaustion(0.005f);
 	        world.setBlockState(pos, state);
 	        Block.dropStack(world, pos, 
-	        		new ItemStack(ModItems.SEPULCHRAL_SHARDS.getEntry()));
-	        world.playSound(null, pos, ModSounds.SEPULCHRAL_SHATTER, 
+	        		new ItemStack(Mod.ITEMS.SEPULCHRAL_SHARDS.getItem()));
+	        world.playSound(null, pos, Mod.SOUNDS.SEPULCHRAL_SHATTER.getSoundEvent(), 
 	        		        SoundCategory.BLOCKS, 1f, 
 	        		        MathHelper.nextBetween(world.random, 0.8f, 1.6f));
 	        shatterSmoke(world, pos);

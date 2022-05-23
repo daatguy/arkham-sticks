@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "io.github.daatguy.arkham_sticks.Mod"
+    ],
+    "client": [
+      "io.github.daatguy.arkham_sticks.ClientMod"
     ]
   },
   "mixins": [
