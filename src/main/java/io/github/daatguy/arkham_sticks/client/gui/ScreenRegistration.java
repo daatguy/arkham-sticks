@@ -8,15 +8,31 @@ import net.minecraft.client.gui.screen.ingame.HandledScreens.Provider;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.ScreenHandlerType.Factory;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+/**
+ * A single Screen's registry entry
+ * 
+ * @author DaatG
+ *
+ * @param <T> The ScreenHandler class in the fabric UI framework
+ * @param <U> The Screen class to associate with the ScreenHandler
+ */
 public class ScreenRegistration<T extends ScreenHandler, U extends HandledScreen<T>> 
-extends Registration {
+	extends Registration {
 
 	private final Factory<T> factory;
 	private final Provider<T, U> provider;
 	private ScreenHandlerType<T> type;
 	
+	/**
+	 * Instantiates a new ScreenRegistration instance
+	 * 
+	 * @param idIn       the string ID of this ScreenRegistration (MOD ID EXLCUDED)
+	 * @param factoryIn  
+	 * @param providerIn
+	 */
 	public ScreenRegistration(String idIn, Factory<T> factoryIn,
 			Provider<T, U> providerIn) {
 		super(idIn);
@@ -44,7 +60,7 @@ extends Registration {
 	public void register() {
 		type = Registry.register(
 				Registry.SCREEN_HANDLER, 
-				getID(), 
+				new Identifier(Mod.ID, getID()), 
 				new ScreenHandlerType<T>(factory));
     	HandledScreens.register(type, provider);
 	}

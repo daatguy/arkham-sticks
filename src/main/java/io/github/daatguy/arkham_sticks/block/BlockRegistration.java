@@ -24,7 +24,7 @@ public class BlockRegistration extends Registration {
 	 * Constructs a new registry entry of a block
 	 * 
 	 * @param blockIn   the block to be registered
-	 * @param idIn      the registry id of the block
+	 * @param idIn      the registry id of the block (MOD ID EXLCUDED)
 	 * @param hasItemIn whether the block has a block item
 	 * @param groupIn   the item group (nullable)
 	 * @throw IllegalArgumentException if the block has no item but

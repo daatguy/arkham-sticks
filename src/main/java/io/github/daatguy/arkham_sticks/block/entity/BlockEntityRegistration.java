@@ -25,7 +25,7 @@ public class BlockEntityRegistration<E extends BlockEntity> extends Registration
 	/**
 	 * Instantiates a new BlockEntityRegistration
 	 * 
-	 * @param idIn               the string ID of this block entity
+	 * @param idIn               the string ID of this block entity (MOD ID EXLCUDED)
 	 * @param blockEntityFactory the block entity's factory
 	 * @param blockIn            the block to attach the block entity to
 	 */
