@@ -44,7 +44,6 @@ public class WritingDeskScreen extends HandledScreen<WritingDeskScreenHandler> {
     @Override
     protected void init() {
         super.init();
-        //titleX = 111;
         titleX = 95;
         titleY = 12;
     }
