@@ -11,6 +11,11 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
+/**
+ * The GUI class for the Writing Desk's UI
+ * 
+ * @author DaatG
+ */
 public class WritingDeskScreen extends HandledScreen<WritingDeskScreenHandler> {
 	
     private static final Identifier TEXTURE = new Identifier(Mod.ID, 
