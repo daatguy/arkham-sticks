@@ -16,6 +16,12 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
+/**
+ * The sepulchral bricks block, with custom implementation for VFX
+ * and shattering behavior
+ * 
+ * @author DaatG
+ */
 public class BlockSepulchralBricks extends Block {
 
 	public BlockSepulchralBricks() {

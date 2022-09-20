@@ -1,6 +1,6 @@
 package io.github.daatguy.arkham_sticks.block;
 
-import io.github.daatguy.arkham_sticks.blockentity.BlockEntityWritingDesk;
+import io.github.daatguy.arkham_sticks.block.entity.BlockEntityWritingDesk;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
@@ -18,7 +18,13 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
-public class BlockWritingDesk extends BlockWithEntity  implements BlockEntityProvider {
+/**
+ * The writing desk block. Writing desks have block entities, and as such
+ * this class inherits from BlockWithEntity, and implements BlockEntityProvider.
+ * 
+ * @author DaatG
+ */
+public class BlockWritingDesk extends BlockWithEntity implements BlockEntityProvider {
 
 	public BlockWritingDesk() {
 		super(FabricBlockSettings.of(Material.WOOD)

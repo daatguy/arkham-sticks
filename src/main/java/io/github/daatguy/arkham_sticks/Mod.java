@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import io.github.daatguy.arkham_sticks.block.ModBlocks;
-import io.github.daatguy.arkham_sticks.blockentity.ModBlockEntities;
+import io.github.daatguy.arkham_sticks.block.entity.ModBlockEntities;
 import io.github.daatguy.arkham_sticks.item.ModItems;
 import io.github.daatguy.arkham_sticks.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;

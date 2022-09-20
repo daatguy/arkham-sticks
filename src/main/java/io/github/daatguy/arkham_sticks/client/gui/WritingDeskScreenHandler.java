@@ -1,4 +1,4 @@
-package io.github.daatguy.arkham_sticks.gui;
+package io.github.daatguy.arkham_sticks.client.gui;
 
 import io.github.daatguy.arkham_sticks.ClientMod;
 import net.minecraft.entity.player.PlayerEntity;

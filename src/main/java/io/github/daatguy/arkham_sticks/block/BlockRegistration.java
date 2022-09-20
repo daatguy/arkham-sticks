@@ -9,6 +9,11 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+/**
+ * Describes a registry entry containing data relevant to a block
+ * 
+ * @author DaatG
+ */
 public class BlockRegistration extends Registration {
 
 	private final Block block;
@@ -58,14 +63,28 @@ public class BlockRegistration extends Registration {
 		this(blockIn, idIn, false, null);
 	}
 	
+	/**
+	 * Returns the block associated with this registry entry
+	 * 
+	 * @return the block associated with this registry entry
+	 */
 	public Block getBlock() {
 		return this.block;
 	}
 	
+	/**
+	 * Returns whether this block has an associated BlockItem
+	 * @return whether this block has an associated BlockItem
+	 */
 	public boolean hasItem() {
 		return this.hasItem;
 	}
 	
+	/**
+	 * Returns this block's ItemGroup (nullable)
+	 * 
+	 * @return this block's ItemGroup (nullable)
+	 */
 	public ItemGroup getItemGroup() {
 		return this.group;
 	}

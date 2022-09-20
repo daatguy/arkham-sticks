@@ -1,4 +1,4 @@
-package io.github.daatguy.arkham_sticks.blockentity;
+package io.github.daatguy.arkham_sticks.block.entity;
 
 import io.github.daatguy.arkham_sticks.Mod;
 import io.github.daatguy.arkham_sticks.registry.Registration;
@@ -9,14 +9,28 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.registry.Registry;
 
-public class BlockEntityRegistration extends Registration {
+/**
+ * Describes a registry entry containing data relevant to a BlockEntity
+ * 
+ * @author DaatG
+ *
+ * @param <E> The associated BlockEntity to register
+ */
+public class BlockEntityRegistration<E extends BlockEntity> extends Registration {
 
-	private BlockEntityType<BlockEntity> blockEntityType;
-	private final Factory<BlockEntity> blockEntityFactory;
+	private BlockEntityType<E> blockEntityType;
+	private final Factory<E> blockEntityFactory;
 	private final Block block;
 	
+	/**
+	 * Instantiates a new BlockEntityRegistration
+	 * 
+	 * @param idIn               the string ID of this block entity
+	 * @param blockEntityFactory the block entity's factory
+	 * @param blockIn            the block to attach the block entity to
+	 */
 	public BlockEntityRegistration(String idIn, 
-			Factory<BlockEntity> blockEntityFactory, 
+			Factory<E> blockEntityFactory, 
 			Block blockIn) {
 		super(idIn);
 		this.blockEntityFactory = blockEntityFactory;
@@ -24,16 +38,25 @@ public class BlockEntityRegistration extends Registration {
 	    this.blockEntityType = null;
 	}
 	
-	/*public Factory<? extends BlockEntity> getBlockEntity() {
-		return this.blockEntity;
-	}*/
-	
+	/**
+	 * Returns the associated block
+	 * 
+	 * @return the associated block
+	 */
 	public Block getBlock() {
 		return this.block;
 	}
 	
-	public BlockEntityType<BlockEntity> getBlockEntityType() {
-		if(blockEntityType == null) throw new IllegalArgumentException("" +
+	/**
+	 * Returns the block entity type
+	 * 
+	 * @return the block entity type
+	 * @throws IllegalStateException if this registry hasn't been registered yet
+	 *                               (BlockEntityTypes are created on registration 
+	 *                               of a BlockEntity)
+	 */
+	public BlockEntityType<E> getBlockEntityType() {
+		if(blockEntityType == null) throw new IllegalStateException("" +
 	                                "getBlockEntityType() called prior to " +
 				                    "BlockEntityType registration for " +
 				                    Mod.ID + ":" + getID() + ".");

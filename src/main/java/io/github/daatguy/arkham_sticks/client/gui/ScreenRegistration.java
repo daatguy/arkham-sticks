@@ -1,4 +1,4 @@
-package io.github.daatguy.arkham_sticks.gui;
+package io.github.daatguy.arkham_sticks.client.gui;
 
 import io.github.daatguy.arkham_sticks.Mod;
 import io.github.daatguy.arkham_sticks.registry.Registration;

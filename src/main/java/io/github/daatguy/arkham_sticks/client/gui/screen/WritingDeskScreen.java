@@ -1,9 +1,9 @@
-package io.github.daatguy.arkham_sticks.gui.screen;
+package io.github.daatguy.arkham_sticks.client.gui.screen;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import io.github.daatguy.arkham_sticks.Mod;
-import io.github.daatguy.arkham_sticks.gui.WritingDeskScreenHandler;
+import io.github.daatguy.arkham_sticks.client.gui.WritingDeskScreenHandler;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;

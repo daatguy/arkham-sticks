@@ -1,6 +1,6 @@
-package io.github.daatguy.arkham_sticks.gui;
+package io.github.daatguy.arkham_sticks.client.gui;
 
-import io.github.daatguy.arkham_sticks.gui.screen.WritingDeskScreen;
+import io.github.daatguy.arkham_sticks.client.gui.screen.WritingDeskScreen;
 import io.github.daatguy.arkham_sticks.registry.ModRegistry;
 
 public class ModScreens extends ModRegistry {
