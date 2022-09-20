@@ -6,6 +6,11 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 
+/**
+ * Initializes all client-side things of the mod, holds all the client-side registries.
+ * 
+ * @author DaatG
+ */
 @Environment(EnvType.CLIENT)
 public class ClientMod implements ClientModInitializer {
 	
