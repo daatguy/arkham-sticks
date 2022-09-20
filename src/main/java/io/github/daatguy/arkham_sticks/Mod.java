@@ -14,6 +14,8 @@ import net.fabricmc.api.ModInitializer;
  * The core Mod class of Arkham Sticks.
  * 
  * Has methods for pre-init, init, post-init, etc. steps of loading Minecraft.
+ *     NOTE: Currently all Mod uses is init, but later developments may use
+ *     pre-init or post-init with no issue.
  * Also has a bunch of fields for different items that need static references.
  * 
  * @author daatguy

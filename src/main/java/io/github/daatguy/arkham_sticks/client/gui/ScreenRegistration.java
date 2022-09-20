@@ -30,8 +30,8 @@ public class ScreenRegistration<T extends ScreenHandler, U extends HandledScreen
 	 * Instantiates a new ScreenRegistration instance
 	 * 
 	 * @param idIn       the string ID of this ScreenRegistration (MOD ID EXLCUDED)
-	 * @param factoryIn  
-	 * @param providerIn
+	 * @param factoryIn  the ScreenHandler factory
+	 * @param providerIn the Provider instance that associates ScreenHandlers and Screens
 	 */
 	public ScreenRegistration(String idIn, Factory<T> factoryIn,
 			Provider<T, U> providerIn) {
@@ -41,17 +41,35 @@ public class ScreenRegistration<T extends ScreenHandler, U extends HandledScreen
 		this.type = null;
 	}
 	
+	/**
+	 * Returns the type of the ScreenHandler associated with this registry entry
+	 * 
+	 * @return the type of the ScreenHandler associated with this registry entry
+	 * @throws IllegalStateException if this hasn't been registered yet
+	 */
 	public ScreenHandlerType<T> getScreenHandlerType() {
-		if(type == null) throw new IllegalArgumentException("getScreenHandlerType() " +
+		if(type == null) throw new IllegalStateException("getScreenHandlerType() " +
 	                                "called prior to ScreenHandlerType registration " +
 				                    "for " + Mod.ID + ":" + getID() + ".");
 		return type;
 	}
 	
+	/**
+	 * Returns the factory associated with this registry entry
+	 * 
+	 * @return the factory associated with this registry entry
+	 */
 	public Factory<T> getFactory() {
 		return this.factory;
 	}
 	
+	/**
+	 * Returns the Provider instance that associates ScreenHandlers and Screens
+	 * which is associated with this registry entry
+	 * 
+	 * @return the Provider instance that associates ScreenHandlers and Screens
+	 *         which is associated with this registry entry
+	 */
 	public Provider<T, U> getProvider() {
 		return this.provider;
 	}

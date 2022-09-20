@@ -13,6 +13,11 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Vec3f;
 
+/**
+ * Renders a Writing Desk in the world
+ * 
+ * @author DaatG
+ */
 public class WritingDeskRenderer implements BlockEntityRenderer<BlockEntityWritingDesk> {
 
 	public WritingDeskRenderer(BlockEntityRendererFactory.Context ctx) {}
@@ -53,8 +58,6 @@ public class WritingDeskRenderer implements BlockEntityRenderer<BlockEntityWriti
 		matrices.push();
 		matrices.translate(slotPositions[slot][0], blockHeight, slotPositions[slot][1]);
 		matrices.scale(scale, scale, scale);
-		//matrices.multiply(
-		//		Vec3f.POSITIVE_X.getDegreesQuaternion(90));
 		matrices.multiply(
 				Vec3f.POSITIVE_Y.getDegreesQuaternion(180));
 		MinecraftClient.getInstance().getItemRenderer().renderItem(

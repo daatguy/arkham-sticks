@@ -4,6 +4,11 @@ package io.github.daatguy.arkham_sticks.item;
 import io.github.daatguy.arkham_sticks.registry.ModRegistry;
 import net.minecraft.item.ItemGroup;
 
+/**
+ * The registry of all the items added in the mod
+ * 
+ * @author DaatG
+ */
 public class ModItems extends ModRegistry {
 
 	public final ItemRegistration SEPULCHRAL_DUST = add(

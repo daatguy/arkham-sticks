@@ -6,6 +6,11 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.collection.DefaultedList;
 
+/**
+ * A custom inventory for the Mod's containers
+ * 
+ * @author DaatG
+ */
 public interface ModInventory extends Inventory {
 
 	/** Retrieves the items in the inventory */
@@ -13,16 +18,18 @@ public interface ModInventory extends Inventory {
 
 	/**
 	 * Creates an inventory instance of given items
+	 * 
 	 * @param items the items to include in the inventory
 	 * @return the inventory
 	 */
 	public static ModInventory of(DefaultedList<ItemStack> items) {
-		// TODO see if arrow can go
+		// TODO see if lambda can go (was in API docs, don't exactly know what it does)
 		return () -> items;
 	}
 	
 	/**
 	 * Creates an empty inventory instance of given size
+	 * 
 	 * @param size the size of the inventory
 	 * @return the inventory
 	 */
@@ -57,6 +64,7 @@ public interface ModInventory extends Inventory {
 	
 	/**
 	 * Removes a given amount of items from a slot
+	 * 
 	 * @param slot  the slot to remove from
 	 * @param count the count to remove
 	 */
@@ -69,6 +77,7 @@ public interface ModInventory extends Inventory {
 
 	/**
 	 * Removes all items from a slot
+	 * 
 	 * @param slot the slot to remove from
 	 */
 	@Override
@@ -78,6 +87,7 @@ public interface ModInventory extends Inventory {
 
 	/**
      * Replaces the current stack in an inventory slot with the provided stack.
+     * 
      * @param slot  the inventory slot to replace
      * @param stack the replacing stack (if too big for this inventory, it gets resized)
      */
